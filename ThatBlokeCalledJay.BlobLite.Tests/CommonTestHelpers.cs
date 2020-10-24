@@ -9,7 +9,7 @@ namespace ThatBlokeCalledJay.BlobLite.Tests
             return new ConfigurationBuilder()
                 .AddEnvironmentVariables()
                 .AddUserSecrets<BlobLiteTests>()
-                .AddJsonFile(fileName).Build();
+                .AddJsonFile(fileName, true).Build();
         }
     }
 }
