@@ -1,2 +1,2 @@
 # BlobLite
-A simple blob service which allows for quick CRUD operations and basic JSON serialization/deserialization operations.
+A simple Azure blob storage service which allows for common CRUD operations and basic JSON serialization/deserialization operations.
