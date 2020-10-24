@@ -4,7 +4,7 @@ namespace ThatBlokeCalledJay.BlobLite.Tests
 {
     public static class CommonTestHelpers
     {
-        public static IConfiguration LoadConfiguration(string fileName = "appsettings.test.json")
+        public static IConfiguration LoadConfiguration(string fileName = null)
         {
             return new ConfigurationBuilder()
                 .AddEnvironmentVariables()
