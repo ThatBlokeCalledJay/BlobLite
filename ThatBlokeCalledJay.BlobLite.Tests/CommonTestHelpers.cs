@@ -6,10 +6,14 @@ namespace ThatBlokeCalledJay.BlobLite.Tests
     {
         public static IConfiguration LoadConfiguration(string fileName = null)
         {
-            return new ConfigurationBuilder()
+            var builder = new ConfigurationBuilder()
                 .AddEnvironmentVariables()
-                .AddUserSecrets<BlobLiteTests>()
-                .AddJsonFile(fileName, true).Build();
+                .AddUserSecrets<BlobLiteTests>();
+            
+            if (!string.IsNullOrWhiteSpace(fileName))
+                builder.AddJsonFile(fileName, true);
+
+            return builder.Build();
         }
     }
 }
